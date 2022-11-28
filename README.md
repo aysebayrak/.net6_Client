@@ -1,3 +1,5 @@
 # .net6_Client
 
-![image](https://user-images.githubusercontent.com/73500636/204376556-f94e649c-22bf-4088-92fa-2014a6eac090.png)
+![image](https://user-images.githubusercontent.com/73500636/204377167-0d1d02fb-7a39-4849-a29e-7354b713b67d.png)
+
+
