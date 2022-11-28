@@ -12,3 +12,17 @@
     "src/**/*.d.ts"
   ]
 }
+
+/*
+AppModule 
+Angular uygulamalrında ana modül.
+Uygulamada kullanılan;tüm modül ve componentlerin(sayfa) declare ve import edildiği moduldur.
+
+
+
+
+*/
+
+
+
+
