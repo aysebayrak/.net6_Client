@@ -14,9 +14,112 @@
 }
 
 /*
+Angular 13 ile
+
+Client da Admin ve UI olarak iki kısımdan oluşuyor.
+Admin içierik yönetimi
+UI kullanıcı kısmı 
+Admin için ; Order, Product, Customer, Dashbord
+UI ; Product, Home, Basket(sepet) componetleri olacak
+Tüm componenteler birer module ya sahip olacak.
+
+
+Kullanıcağımız modüller yönetim dağınık yönrtimini kolaylaştıracak ve 
+Rota yönetimi  işlemlerinde  label loding tasarımını kıracağız.
+
+
+--------------
 AppModule 
 Angular uygulamalrında ana modül.
-Uygulamada kullanılan;tüm modül ve componentlerin(sayfa) declare ve import edildiği moduldur.
+Uygulamada kullanılan;tüm modül ve componentlerin(sayfa) declare ve import 
+edildiği moduldur.
+
+-------------------
+Modüller çalışmalarda önce modüller sonra componentler oluşturulmalı.
+
+module  = m
+component = c
+Module oluşturma: ng g m admin
+
+1.Admin moodule , UI module 
+admin ile ui arasında ki fark , ui default layout,
+admin ise iradeli olarak geçmek istenilen yer ve farklı bir layout olacak.
+
+-- Admin module den devam edelim, Layout oluşturmam lazım; ng g m admin/layout
+
+Not : Module importllar en yakın olan componente eklenir
+Not : 
+Eğerki bir module başka bir modulü kendi içinde benimseyecekse o modulu  kendi içinde 
+import etmek zorunda.
+Admine layout tu vereceksem admine import  etmem lazım
+admin module gel import et.
+
+-- Layout içinde bir tane component olması lazım. Yönetim panelinin tasarımının yapılacağı.
+ng g c admin/layout 
+
+-- Angular mimarasinde bir componenti kullanmk istiyorsan onun uygulamanın ana modulüne (app.module)
+declare edilmesi gerekiyor.
+
+-- Layout componentin yönrtimi için layoutun componentlerini oluşturalım.(Layoutun componnetleri)
+Bir şeyin kendine ait componetleri varsa onların yer  alacağı component isminde modül oluşturup;
+ng g m admin/layout/components
+
+onun içine  layoutllatını ekleyelim.
+ng g c admin/layout/components/header
+ng g c admin/layout/components/sidebar
+ng g c admin/layout/components/footer
+
+NOT : Bu componetler en yakın olan yani altında oldukları comopnentmodule declara olarak otomatik eklenirler.
+
+NOT : Bu componentleri artık layout.html de  istediğimiz gibi sergileriz.
+
+
+NOT NOT : Bu yapılan katmanlarasında iletişim için export yapmam lazım. 
+Select edilebilmesi için ilgili componentlerin ilgili module seviyesinde exports edilmeli.
+Bunu anşlamaz isen video dan bak.
+ders10 : 20.dk
+
+NOT : modulu modüle ekliyorsan import
+
+
+-- Adminin kendi componentlerini yapalım, ordercoomponent...(bunlaraın toplu olacağı modul ile başlayalım)
+ng g m admin/components
+
+VE altına componnetleri:
+ng g m admin/components/products  // modelleri ile başlayalım çünkü birde fazla işlem olabiilir listele...
+ng g c admin/components/products  // componnetler
+
+ng g m admin/components/order 
+ng g c admin/components/order 
+...
+
+---------------------------
+Uİ İÇİN :
+ng g m ui/components
+
+ng g m ui/components/products
+ng g c ui/components/products
+
+ng g m ui/components/baskets
+ng g c ui/components/baskets
+
+ng g m ui/components/home
+ng g c ui/components/home
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
