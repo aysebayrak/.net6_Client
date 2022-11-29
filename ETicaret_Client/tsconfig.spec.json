@@ -156,6 +156,24 @@ Ve biz sonrasında kendimiz html lere anlaşılması için isimlerini verdik.
 Sonrasında isteğğine göre düzenle
 */
 
+/* Bootstrap
+npm install bootstrap : npm i bootstrap
+Angular.jsonda ilk "styles" ye "node_modules/bootstrap/dist/css/bootstrap.min.css" yi ekle
+ "scripts de   "node_modules/bootstrap/dist/js/bootstrap.min.js"ekle.
+
+*/
+/*
+    jquery
+Query çoklu kod satırlarını tek bir koda sıkıştırır, böylece tek bir göreve ulaşmak 
+için bloklarca kodu yeniden yazmak zorunda kalmazsınız.
+npm i jquery
+angular.json da  script elke.
+componentler de erişebilmek için : app.component.ts ye =   declare var $: any  
+
+
+*/
+
+
 
 
 
