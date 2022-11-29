@@ -138,7 +138,24 @@ Uİ Componnetleri
 -------------------
 2. Ana modulde(app modul de) rotolanma  yapacağız.(app.routing.module.ts)
 3. Rota işlemlerinden sonra sayfalarda routing ile yönlendşrme yap .
+
+NOT : BİR SAYFADA ROUTRE LİNK KULLANMAM İÇİN ONUN ÜST MODULÜNE RouerModulu import etmem lazım.
 */
+
+/* Bootstrap  - Material  ENTEGRASYON
+
+Adminde material
+Uİ da bootstrap kullanılacak.
+
+Angular Material  :  https://material.angular.io/
+  ng add @angular/material
+ styles.css ye ekle : @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+Sayfalarda yapı kullanırken kütüphane importlarını yapmam lazım .MODULE İMPORT ETMEM LAZIM.
+Kullanılan yapının css si eklenecek
+Ve biz sonrasında kendimiz html lere anlaşılması için isimlerini verdik.
+Sonrasında isteğğine göre düzenle
+*/
+
 
 
 
