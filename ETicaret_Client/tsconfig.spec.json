@@ -106,24 +106,38 @@ ng g c ui/components/baskets
 ng g m ui/components/home
 ng g c ui/components/home
 
+*/
 
 
+/*   Angular Multiple Layout
 
+  Single page application olarak tasarlanan Angular mimarisinde, çoklu sayfalama için 
+multiple layout kullanılır.
 
+    Routing
 
+Bunun için roto belirleyeceğiz.(Roting)
+1. Her bir componente modül seviyesinde  rota belirleyeceğiz.
 
+O componetelrim bulunduğu modul den tasarlayacağım, rotayı.
 
+Adimn  Componentlerinden BAŞLAYALIM:
+Customer: 
+Customer Modul (customer.module.ts) de yapacağım. {path:"x",component:CustomerComponent}
+Dashbord:
+Dahbord Modul de :  {path:"",component :DashboardComponent}
+....
 
+-----
+Uİ Componnetleri
+{path:"",component:BasketsComponent}
+{path:"",component:HomeComponent}
+{path:"",component:ProductsComponent}
+.....
 
-
-
-
-
-
-
-
-
-
+-------------------
+2. Ana modulde(app modul de) rotolanma  yapacağız.(app.routing.module.ts)
+3. Rota işlemlerinden sonra sayfalarda routing ile yönlendşrme yap .
 */
 
 
