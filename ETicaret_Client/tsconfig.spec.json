@@ -174,7 +174,7 @@ componentler de erişebilmek için : app.component.ts ye =   declare var $: any
 /*
      Alertifyjs  :  https://alertifyjs.com/
 Diyolog pencereleri,
-Ekrana ufak mesajlar (token gibi)
+Ekrana ufak mesajlar (toastr gibi)
 
 npm install alertifyjs --save
 angular.js :
@@ -191,6 +191,19 @@ Angularda özeleştirme  için servis yazalır genelde.
 ---- Servis için 
 ng g s services/admin/alertify
 
+*/
+
+/* ngx-Toastr  : https://github.com/scttcper/ngx-toastr
+Ui kısmında kullanacağız.
+
+npm install ngx-toastr --save
+npm install @angular/animations --save (ngx bu pakete bağlı, angularda bu paket default oolarak gelir zaten. yoksa yükle)
+angılar.json a  style yükle : "node_modules/ngx-toastr/toastr.css"
+
+Ana module(app) import et
+
+Servis haline getirelim.
+ng g s services/ui/customToastr
 */
 
 

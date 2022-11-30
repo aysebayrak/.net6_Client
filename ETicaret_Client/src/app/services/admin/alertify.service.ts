@@ -31,7 +31,7 @@ export class AlertifyOptions{ //hata vermemesi için tsconfig.json da strict : f
 }
 
 export enum MessageType{
-  Error = "error ",
+  Error = "error",
   Message = "message",
   Notify  = "notify",
   Success  = "success",
