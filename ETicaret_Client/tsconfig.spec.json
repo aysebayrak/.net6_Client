@@ -170,6 +170,26 @@ npm i jquery
 angular.json da  script elke.
 componentler de erişebilmek için : app.component.ts ye =   declare var $: any  
 
+*/
+/*
+     Alertifyjs  :  https://alertifyjs.com/
+Diyolog pencereleri,
+Ekrana ufak mesajlar (token gibi)
+
+npm install alertifyjs --save
+angular.js :
+          node_modules/alertifyjs/build/css/alertify.min.css
+          node_modules/alertifyjs/build/alertify.min.js  
+          node_modules\alertifyjs\build\css\themes\semantic.min.css  ekle
+
+componnetde : declare var alertify: any ekle ve devamını yap
+
+Ve bunu daha kullanışlı kullanmak için kişiselleştiireceğiz.
+Angularda özeleştirme  için servis yazalır genelde.
+
+
+---- Servis için 
+ng g s services/admin/alertify
 
 */
 
