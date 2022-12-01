@@ -206,8 +206,16 @@ Servis haline getirelim.
 ng g s services/ui/customToastr
 */
 
+/*
+          Ngx-Spinner 
+          
+NOT : VERSİYON KAYNAKLI KURULMADI.
+Animasyon Bekleme Altyapısı
+npm install ngx-spinner --save
+Hangi sekili kullanacaksan onun cssini angularjson a ekle
 
-
-
+app.module :  NgxSpinnerModule import et
+app html ye  <ngx-spinner type="ball-scale-multiple"></ngx-spinner> ekleyince o şekli kullanıyorum. kullanıyorum
+*/
 
 
