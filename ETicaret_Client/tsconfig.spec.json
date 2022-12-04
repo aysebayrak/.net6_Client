@@ -13,7 +13,7 @@
   ]
 }
 
-/*
+/*  Genel
 Angular 13 ile
 
 Client da Admin ve UI olarak iki kısımdan oluşuyor.
@@ -162,7 +162,9 @@ Angular.jsonda ilk "styles" ye "node_modules/bootstrap/dist/css/bootstrap.min.cs
  "scripts de   "node_modules/bootstrap/dist/js/bootstrap.min.js"ekle.
 
 */
-/*
+
+
+/* jquery
     jquery
 Query çoklu kod satırlarını tek bir koda sıkıştırır, böylece tek bir göreve ulaşmak 
 için bloklarca kodu yeniden yazmak zorunda kalmazsınız.
@@ -171,7 +173,9 @@ angular.json da  script elke.
 componentler de erişebilmek için : app.component.ts ye =   declare var $: any  
 
 */
-/*
+
+
+/*  Alertifyjs
      Alertifyjs  :  https://alertifyjs.com/
 Diyolog pencereleri,
 Ekrana ufak mesajlar (toastr gibi)
@@ -193,7 +197,8 @@ ng g s services/admin/alertify
 
 */
 
-/* ngx-Toastr  : https://github.com/scttcper/ngx-toastr
+/*  ngx-Toastr
+ngx-Toastr  : https://github.com/scttcper/ngx-toastr
 Ui kısmında kullanacağız.
 
 npm install ngx-toastr --save
@@ -206,16 +211,60 @@ Servis haline getirelim.
 ng g s services/ui/customToastr
 */
 
-/*
-          Ngx-Spinner 
+/*   Ngx-Spinner 
+          
           
 NOT : VERSİYON KAYNAKLI KURULMADI.
 Animasyon Bekleme Altyapısı
 npm install ngx-spinner --save
 Hangi sekili kullanacaksan onun cssini angularjson a ekle
 
+Her modul seviyesine ekleme yapında sadece modul seviyesindeki componnetlerde kullanabiliyorum.
+
 app.module :  NgxSpinnerModule import et
-app html ye  <ngx-spinner type="ball-scale-multiple"></ngx-spinner> ekleyince o şekli kullanıyorum. kullanıyorum
+app html ye  <ngx-spinner type="ball-scale-multiple"></ngx-spinner> ekleyince o şekli kullanıyorum.
+
+Bu yapının kullanımı için basecomponent yaparak diğerlerine exdent edelim.
 */
 
+/*  CORS Politikası
+Eğerki client uygulaması browser'da (Opera,Chrome,Mozilla vs.) çalışıyorsa burada CORS politikaları devreye girer.
+Browser , benim  üzerinde farklı bir targete(hedefe ) istek gönderemezsin. Browserların bu davranışına Same-origin policy denmektedir.
+
+Browserlar doğal olarak almış oldukları Same-origin policy önlemini aşabilmek için client uygulamasının 
+istek gönderdiği hedef siteye/origine/endpoint/apiye öncellikle bu siteden gelecek olan requestlere izni olup olmasığna bakar ve ona göre 
+izin verir yada iptal eder.
+
+Same-origin policy, zararlı sitelerin diğer sitelerden browser tabanlı veri okumansını 
+engelleyerek büyük bir güvenlik açığını kapatır.
+
+API'lar üzerinden browserların almış oldukkarı doğal same origin policy önleminii hafifletme 
+politikasıdır.
+
+
+
+Bunun çözümünü API kısmında halledeceğiz.
+
+*/
+
+/* Custom HttpClient Servisi Oluşturmak
+
+Servis oluşturmak için :  ng g s services/common/httpClient
+
+Base Url için, app.module.ts de providers de çalışma yapalım
+
+HttpClientı kullanabilmek için   app.module.ts ye HttpClientModule import edilmeli.
+*/
+
+/*  Contracts
+
+API in dönderdiği datanın türü her neyse, o türü karşılayacak bir sınıf oluşturulur. Oluşturluna 
+bu sınıf bizim cContracts olacak. 
+Gelen datanın direk dönüşümünü sağlar.
+İlgili datanın alanlarını bu Contracts sayedsinde, tip güvenli şekilde erişim sağlayabiliirm.
+
+
+class oluşrmak için  :  ng g cl contracts/product
+
+*/ 
 
