@@ -108,7 +108,6 @@ ng g c ui/components/home
 
 */
 
-
 /*   Angular Multiple Layout
 
   Single page application olarak tasarlanan Angular mimarisinde, çoklu sayfalama için 
@@ -163,7 +162,6 @@ Angular.jsonda ilk "styles" ye "node_modules/bootstrap/dist/css/bootstrap.min.cs
 
 */
 
-
 /* jquery
     jquery
 Query çoklu kod satırlarını tek bir koda sıkıştırır, böylece tek bir göreve ulaşmak 
@@ -173,7 +171,6 @@ angular.json da  script elke.
 componentler de erişebilmek için : app.component.ts ye =   declare var $: any  
 
 */
-
 
 /*  Alertifyjs
      Alertifyjs  :  https://alertifyjs.com/
@@ -268,3 +265,27 @@ class oluşrmak için  :  ng g cl contracts/product
 
 */ 
 
+/* Ürün Ekleme
+
+ng g c admin/components/products/create  : ürün ekleme componneti
+
+Listeleme için : ng g c admin/components/products/list
+
+
+Bu tarz işlemlerde client eklemeyi servisten almalı. ng g s services/common/models/product
+Verimi ekleyeceğiz, sileceğiz hepsini bu services üzerinden çekeceğiz.
+
+*/
+
+/*  Fluent Validation İle ValidationFilter    
+
+Gelen datayı istenilen şekilde almak için.
+Validation hem uı,hem backend, veri tabanında tüm seviyelerde önlemler alınmalı.
+*/
+
+/*   Ürünlerin listelenmesi ve Pagination
+
+
+
+
+*/
