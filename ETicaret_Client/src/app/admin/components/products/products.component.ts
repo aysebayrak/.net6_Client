@@ -11,8 +11,9 @@ export class ProductsComponent implements OnInit {
   constructor(){}
 
   ngOnInit(): void {
-    
+
   }
+  
   @ViewChild(ListComponent) listComponents : ListComponent;
 
   createdProduct(createdProduct :Create_Product ){

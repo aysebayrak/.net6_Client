@@ -251,6 +251,7 @@ Servis oluşturmak için :  ng g s services/common/httpClient
 Base Url için, app.module.ts de providers de çalışma yapalım
 
 HttpClientı kullanabilmek için   app.module.ts ye HttpClientModule import edilmeli.
+
 */
 
 /*  Contracts
@@ -275,16 +276,29 @@ Listeleme için : ng g c admin/components/products/list
 Bu tarz işlemlerde client eklemeyi servisten almalı. ng g s services/common/models/product
 Verimi ekleyeceğiz, sileceğiz hepsini bu services üzerinden çekeceğiz.
 
+Creat(ekleme) işlemi yapabilmek için öncelikle html de bunların değerlerini elde edeceğim, ilgili değerleri 
+ilgili değerleri productservice nin create fonksiyınuna yollayacağım.
+Bunun için inputları işaretleyeceğim. =  #txtName....
+
 */
 
-/*  Fluent Validation İle ValidationFilter    
+/* Fluent Validation İle ValidationFilter    
 
 Gelen datayı istenilen şekilde almak için.
 Validation hem uı,hem backend, veri tabanında tüm seviyelerde önlemler alınmalı.
 */
 
-/*   Ürünlerin listelenmesi ve Pagination
+/*  Ürünlerin listelenmesi ve Pagination
 
 */
 
+/* Delete Directive ile Silme Operasyonlar
+
+Directive : şablonlardaki ögelere  yeni davranışlar ekleyen veya mevcut davranışı değiştiren sınıflardır.
+DOM' u manipüle etmek için kullanılır, örneğin dom'a öge eklemek, kaldırmak, öğrelerin görünümünü değiştirmek için 
+
+directive oluştıurmak için : ng g directive directives/admin/delete
+
+
+*/
 
