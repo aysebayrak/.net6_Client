@@ -15,22 +15,25 @@ export class ListComponent implements OnInit{
   constructor(private productService: ProductService,
     private alertifyService :AlertifyService){}
 
-  displayedColumns: string[] = ['name', 'stock', 'price', 'createdDate','updatedDate', 'edit' ,'delete'];
-  dataSource : MatTableDataSource<List_Product>  = null;
+   displayedColumns: string[] = ['name', 'stock', 'price', 'createdDate','updatedDate', 'edit' ,'delete']; // listelenecek verinin kolanları (tablo için kulanıyorum.)
+   dataSource : MatTableDataSource<List_Product>  = null; //ts için
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
 
-   async getProducts(){
-    const allProducts : {totalProductCount:number; products:List_Product[]} =  await this.productService.read(this.paginator ?  this.paginator.pageIndex:0,this.paginator ?  this.paginator.pageSize:5,()=> errorMessage => this.alertifyService.message(errorMessage,{
+
+  async getProducts(){
+    const allProducts : {totalProductCount:number; products:List_Product[]} =  
+      await this.productService.read(this.paginator ?  this.paginator.pageIndex:0,
+        this.paginator ?  this.paginator.pageSize:5,
+        ()=> errorMessage => this.alertifyService.message(errorMessage,{
       dismissOthers : true,
       messageType:MessageType.Error,
       position: Position.TopRight
     }))
- 
     this.dataSource = new MatTableDataSource<List_Product>(allProducts.products);
     this.paginator.length= allProducts.totalProductCount;
-    
-    
+ 
   }
 
   async pageChanged(){
@@ -40,6 +43,10 @@ export class ListComponent implements OnInit{
  async ngOnInit() {
     await  this.getProducts();
  }
+
+
+
+
    
 }
 

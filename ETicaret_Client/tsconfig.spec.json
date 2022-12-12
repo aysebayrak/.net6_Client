@@ -290,6 +290,11 @@ Validation hem uı,hem backend, veri tabanında tüm seviyelerde önlemler alın
 
 /*  Ürünlerin listelenmesi ve Pagination
 
+sayfalamayı o an ki size a göre veriyi veri tabanından çekeceğiz.
+Listeleme için kullandığımzı tablo için bazı ts ayarları mevcut.
+
+
+
 */
 
 /* Delete Directive ile Silme Operasyonlar

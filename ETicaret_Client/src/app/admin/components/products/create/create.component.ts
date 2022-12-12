@@ -16,7 +16,7 @@ export class CreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Output() createdProduct: EventEmitter<Create_Product> = new EventEmitter();
+  @Output() createdProduct: EventEmitter<Create_Product> = new EventEmitter(); //aynı anda eklenınce listede olsun diye
 
   create(name : HTMLInputElement,stock : HTMLInputElement,price: HTMLInputElement){
     const create_product: Create_Product = new  Create_Product();
